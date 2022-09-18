@@ -1,0 +1,22 @@
+-Arquivos binarios em c:
+Por que usar?
+Os arquiivos de texto embora sejam mais faceis de manipular e acessar o seu conteúdo possuem algumas desvantagens. 
+É necessário separar os campos por algum caracter, o acesso dos elementos são dados de forma sequencial e os caracteres numéricos são armazenados como texto, ocupando mais espaço do que o necessário.
+Já os arquivos binarios têm seu conteúdo armazenado em formato binário e ocupam menos espaço que os arquivos de texto e não precisam de separadores. 
+As funções dos arquivos binários estão contidas na bibioteca stlib.h, como os arquivos de texto.
+
+
+//abertura de arquivos binários
+sintaxe: 
+    FILE *fp;
+    fp=fopen("exemplo.dat","rb")
+
+obs.: no modo de abertura acrescenta o sufixo b representando arquivo binário.
+
+//escrita em arquivos binarios
+função fwrite.
+    sintaxe: fwrite(void *buffer,int tam, int count, FILE*fp);
+    buffer é a variável que contem os dados a serem escritos no arquivo
+    tam é o tamanho de cada dado a ser escritos
+    fp é o ponteiro que aponta para o arquivo.
+retorna o número e itens escritos.
